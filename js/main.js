@@ -58,3 +58,22 @@ document.getElementById("btnTaoDiv").onclick = function(){
         checkTF++;
     }
 }
+
+document.getElementById("btnBai5").onclick = function () {
+    var n = document.getElementById("soN5").value * 1;
+    var kq = "";
+    var dem = 0;
+    for (var i =0; i <= n; i++) {
+        var temp = 0;
+        for (dem = i; dem >= 1; dem--) {
+            if(i%dem == 0){
+                temp = temp + 1;
+            }
+            
+        }
+        if(temp == 2){
+            kq += i + " ";
+        }
+    }
+    document.getElementById("kqBai5").innerHTML = kq;
+}
